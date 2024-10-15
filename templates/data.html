@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link href="{{ url_for('static', filename='main.css') }}" type="text/css" rel="stylesheet">
+    
+</head>
+<body>
+
+    
+    <div class="wrapper">
+
+    
+        <header class="header-content">
+            <button class="Logout"><a href="http://127.0.0.1:5000/">Log out</a></button>
+            <h2>Greenhouse Project</h2>
+            <h1>Previous Data of the Green House</h1>
+        </header>
+
+        <ul>
+            <li><a href="http://127.0.0.1:5000/hello">Home</a></li>
+            <li><a href="http://127.0.0.1:5000/greenhouse_project">Sensors</a></li>
+            <li><a href="http://127.0.0.1:5000/network">Network</a></li>
+            <li><a href="http://127.0.0.1:5000/data">Data</a></li>
+        </ul>
+    </div>
+    
+    <div class="greenhous_data">
+       
+        <img class="greenhous_data" src="../static/greenhous_data.png" alt="greenhous_data">
+        <p>Here you can see an example of an sensor read. It displays the average 
+            temperature and humidity. Alongside maximum levels and the minimal levels.</p>
+        
+        
+    </div>
+
+       
+    <footer>
+        <span class="disclaimer">This website is created only for educational purposes</span>
+        <span class="credits">Made by Ihsan KAYIKCI</span>
+    </footer>
+</body>
+</html>

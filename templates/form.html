@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="{{ url_for('static', filename='main.css') }}" type="text/css" rel="stylesheet">
+    
+</head>
+<body>
+
+    
+    <div class="wrapper">
+
+    
+        <header class="header-content">
+            <button class="Logout"><a href="http://127.0.0.1:5000/">Log out</a></button>
+            <h2>Hello, {{ name }}!</h2>
+            <h1>Welcome to the GreenHouse Home Page</h1>
+        </header>
+
+        <ul>
+            <li><a href="http://127.0.0.1:5000/hello">Home</a></li>
+            <li><a href="http://127.0.0.1:5000/greenhouse_project">Sensors</a></li>
+            <li><a href="http://127.0.0.1:5000/network">Network</a></li>
+            <li><a href="http://127.0.0.1:5000/data">Data</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+       
+        <p>Welcome to my GreenHouse Project</p>
+        <p>I’m thrilled to have you here! This project is a culmination of the knowledge and skills I’ve 
+            been developing in various field Software Programming, Embedded Systems and Web Technologies,
+             Networking and Business Analysis and more. It’s not just a technical challenge but an opportunity
+              to combine innovation with real-world problem-solving.Through this project, I’ve had the chance 
+              to analyze problems,  understand stakeholder needs, gather requirements, and propose an IT solution that integrates
+              everything I’ve learned. The goal is not just to build something, but to do it
+               through analysis and design before jumping into development.
+            I hope you enjoy exploring this project as much as I’ve enjoyed creating it.</p>
+
+        <p>Thanks for being part of this journey!</p>
+
+        <p></p>
+        
+    </div>
+
+       
+    <footer>
+        <span class="disclaimer">This website is created only for educational purposes</span>
+        <span class="credits">Made by Ihsan KAYIKCI</span>
+    </footer>
+</body>
+</html>

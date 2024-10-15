@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Redings</title>
+    <link href="{{ url_for('static', filename='main.css') }}" type="text/css" rel="stylesheet">
+    <meta http-equiv="refresh" content="5">
+</head>
+<body>
+
+    
+    <div class="wrapper">
+        <header class="header-content">
+            <button class="Logout"><a href="http://127.0.0.1:5000/">Log out</a></button>
+            <h2>Greenhouse Monitoring System</h2>
+            <h1>Display Light Brightness, Humidity and Temprature in increments</h1>
+        </header>
+
+        <ul>
+            <li><a href="http://127.0.0.1:5000/hello">Home</a></li>
+            <li><a href="http://127.0.0.1:5000/greenhouse_project">Sensors</a></li>
+            <li><a href="http://127.0.0.1:5000/network">Network</a></li>
+            <li><a href="http://127.0.0.1:5000/data">Data</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <table class="data"><span>
+            <tr class="table-info">
+                <th>#</th>
+                <th>
+                    <div class="dropdown">
+                    <button class="dropbtn">Sensors</button>
+                    <div class="dropdown-content">
+                      <a href="http://127.0.0.1:5000/greenhouse_project">All</a>
+                      <a href="http://127.0.0.1:5000/greenhouse_project_sensorA">A</a>
+                      <a href="http://127.0.0.1:5000/greenhouse_project_sensorB">B</a>
+                      <a href="http://127.0.0.1:5000/greenhouse_project_sensorC">C</a>
+                      
+                    </div>
+                  </div>
+                </th>
+                <th>Day and Time</th>
+                <th>Light Levels (w/m2)</th>
+                <th>Temprature C</th>
+                <th>Humidity %</th>
+            </tr>
+        {% set index = 0 %}
+        {% for data in currentData | reverse %}
+          
+            <tr>
+                <td>{{ loop.revindex }}</td>
+                <td>{{ data.sensor_id }}</td>
+                <td>{{ data.time}}</td>
+                <td>{{data.light_level}}</td>
+                <td>{{data.temprature}}</td>
+                <td>{{data.humidity}}</td>
+            </tr>
+        
+        {% endfor %}
+        </table>
+
+    
+    </div>
+
+       
+    <footer>
+        <span class="disclaimer">This website is created only for educational purposes</span>
+        <span class="credits">Made by Ihsan KAYIKCI</span>
+    </footer>
+</body>
+</html>
